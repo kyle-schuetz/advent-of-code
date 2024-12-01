@@ -19,6 +19,21 @@ function buildDistanceLists(fileName) {
     return [leftItems, rightItems]
 }
 
+function buildFreqMap(list) {
+    const freqMap = {};
+
+    for (const item of list) {
+        if (item in freqMap) {
+            freqMap[item] += 1;
+        } else {
+            freqMap[item] = 1;
+        }
+    }
+
+    return freqMap;
+}
+
 module.exports = {
-    buildDistanceLists
+    buildDistanceLists,
+    buildFreqMap
 }

@@ -9,15 +9,7 @@ const helpers = require('./helper');
 
 const [left, right] = helpers.buildDistanceLists('input.txt');
 
-const rightFreqMap = {};
-
-for (const item of right) {
-    if (item in rightFreqMap) {
-        rightFreqMap[item] += 1;
-    } else {
-        rightFreqMap[item] = 1;
-    }
-}
+const rightFreqMap = helpers.buildFreqMap(right);
 
 let frequencyScore = 0;
 
