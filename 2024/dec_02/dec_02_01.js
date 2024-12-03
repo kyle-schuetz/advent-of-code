@@ -201,7 +201,7 @@ function isSafe(levelsReport) {
     }
 
     // check to see if we can dampen to make the report increasing
-    let [dampenedIncreasingStatus, dampenedIncreasingLevelsReport] = _isIncreasingWithDampening(levelsReport);
+    // let [dampenedIncreasingStatus, dampenedIncreasingLevelsReport] = _isIncreasingWithDampening(levelsReport);
     // we now have an increasing report, check if it is safe
     if (dampenedIncreasingStatus && _isIncreasingSafe(dampenedIncreasingLevelsReport)) {
         return true;
